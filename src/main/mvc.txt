@@ -1,0 +1,95 @@
+
+Request
+GET
+-------------------------------------------------------------
+Get - request most popular request in HTTP protocol.
+if you open a wab-site or open video it's all GET request.
+GET request doesn't change anything in server.
+Body request is empty we don't need to put any data because we don't need to load any data to server
+But sometimes we need to send a parameter we put this parameter in address after ?
+
+POST
+-------------------------------------------------------------
+POST request has  a main goal, send any data to server or change any data in server
+Often use for send data from web form, and create a new account or put info in database
+All parameters saved only in body request
+
+-------------------------------------------------------------
+Response
+-200 = all ok
+-3xx = redirect
+-4xx = Client error
+-5xx = Server error
+
+ContentType
+-text/html
+-text/css
+-text/xml
+-application/json
+....
+-------------------------------------------------------------
+
+CRUD
+-create
+-read
+-update
+-delete
+This is four basis function what used with database
+
+-------------------------------------------------------------
+REST - pattern for creating an only web-application.
+describes how in HTTP protocol need to communicate with server for reading
+adding changing or deleting.
+Describes witch URL methods need to use
+
+GET /users READ
+GET /users/:id READ
+POST /users CREATE
+PATCH /users/:id UPDATE
+DELETE /users/:id DELETE
+
+-------------------------------------------------------------
+We need to create other class who will be managed with database this pattern called DAO
+
+-------------------------------------------------------------
+Annotation @ModelAttribute - can annotation method and argument of method
+
+If we are annotation method it's mean what this method will be in each method in this controller.
+
+If we are annotation argument it means what if we need in Post method create a new person we don't need
+to write it in code
+
+-------------------------------------------------------------
+If we need to dealt with database we can use not a Prepare statement we can use jdbcTemplate
+This tools help to us working with database, and we don't need to create entity and put result set
+we can use special class  new BeanPropertyRowMapper<>(ClassWhatYourNeed.class)
+
+-------------------------------------------------------------
+All properties we need to save in other file for ex: databaseProperties and use
+Environment to will get this variable
+-------------------------------------------------------------
+
+Batch update - when we need to insert many records in database
+
+If we use batch we pack many records in one package abn send it
+
+-------------------------------------------------------------
+DATABASE
+one to many - one customer and many orders(teacher - student)
+one to one - one person belong one passport and one passport belong one person(president-country, Director and school)
+many to many - (many actors - many movie)
+
+-------------------------------------------------------------
+DATABASE INDEXES
+
+CREATE INDEX table (any index)
+
+-------------------------------------------------------------
+Pattern Annotation
+@Pattern
+
+-------------------------------------------------------------
+Hibernate
+Object-relational Mapping
+ORM
+

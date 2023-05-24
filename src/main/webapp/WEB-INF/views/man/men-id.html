@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MenById</title>
+</head>
+<body>
+<p th:text="${men.getId()}"></p>
+<p th:text="${men.getName()}"></p>
+<p th:text="${men.getAge()}"></p>
+<p th:text="${men.getEmail()}"></p>
+
+<hr>
+
+<a th:href="@{/mens/{id}/edit-man(id=${men.getId()})}">Update man</a>
+
+<hr>
+<br><br>
+
+<form th:method="DELETE" th:action="@{/mens/{id}(id=${men.getId()})}" >
+    <input type="submit" value="DELETE MAN">
+</form>
+</body>
+</html>
